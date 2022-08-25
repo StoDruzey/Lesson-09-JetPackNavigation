@@ -18,6 +18,11 @@
     <fragment
         android:id="@+id/second_fragment"
         android:name="com.example.lesson09jetpacknavigation.FragmentSecond"
-        tools:layout="@layout/fragment_second"/>
+        tools:layout="@layout/fragment_second">
+
+        <argument
+            android:name="text"
+            app:argType="integer"/>
+    </fragment>
 
 </navigation>

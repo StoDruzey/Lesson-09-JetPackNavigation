@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.lesson09jetpacknavigation.databinding.FragmentFirstBinding
+import kotlin.random.Random
 
 class FragmentFirst : Fragment() {
     private var _binding: FragmentFirstBinding? = null
@@ -27,7 +29,8 @@ class FragmentFirst : Fragment() {
 
         with(binding) {
             button.setOnClickListener {
-                findNavController().navigate(R.id.to_second_fragment)
+                val direction = FragmentFirstDirections.toSecondFragment(Random.nextInt())
+                findNavController().navigate(direction)
             }
         }
     }
