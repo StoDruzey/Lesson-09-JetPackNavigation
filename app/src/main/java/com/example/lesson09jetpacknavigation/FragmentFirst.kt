@@ -29,7 +29,9 @@ class FragmentFirst : Fragment() {
 
         with(binding) {
             button.setOnClickListener {
-                val direction = FragmentFirstDirections.toSecondFragment(Random.nextInt())
+//for each fragment with action generates special class named as fragment: FragmentFirstDirections
+//in that class generate methods for directions where to go and arguments to transfer
+                val direction = FragmentFirstDirections.toSecondFragment("args_string", Random.nextInt())
                 findNavController().navigate(direction)
             }
         }

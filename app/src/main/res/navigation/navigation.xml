@@ -21,8 +21,14 @@
         tools:layout="@layout/fragment_second">
 
         <argument
+            android:defaultValue="0"
             android:name="text"
             app:argType="integer"/>
+
+        <argument
+            android:name="value"
+            app:argType="string"/>
+
     </fragment>
 
 </navigation>

@@ -11,7 +11,7 @@ import com.example.lesson09jetpacknavigation.databinding.FragmentSecondBinding
 class FragmentSecond : Fragment() {
     private var _binding: FragmentSecondBinding? = null
     private val binding get() = requireNotNull(_binding)
-
+//exists a delegate for transferring arguments: navArgs. We need to parametrize it with the name of destination fragment: FragmentSecondArgs
     private val args by navArgs<FragmentSecondArgs>()
 
     override fun onCreateView(
@@ -27,7 +27,7 @@ class FragmentSecond : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView.text = args.text.toString()
+        binding.textView.text = args.text.toString() + args.value
     }
 
     override fun onDestroyView() {
